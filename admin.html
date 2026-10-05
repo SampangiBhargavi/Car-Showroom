@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | DriveX Motors</title>
+
+    <link rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet"
+          href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+    <!-- HEADER -->
+
+    <div class="d-flex justify-content-between
+                align-items-center mb-4">
+
+        <div>
+
+            <h2>
+                <i class="bi bi-speedometer2"></i>
+                Admin Dashboard
+            </h2>
+
+            <p class="text-muted mb-0">
+                Manage your car showroom
+            </p>
+
+        </div>
+
+
+        <button onclick="logoutAdmin()"
+                class="btn btn-outline-danger">
+
+            <i class="bi bi-box-arrow-right"></i>
+
+            Logout
+
+        </button>
+
+    </div>
+
+
+    <!-- STATS -->
+
+    <div class="row g-3 mb-4">
+
+        <div class="col-md-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-car-front fs-2"></i>
+
+                <h3 id="carCount">
+                    0
+                </h3>
+
+                <p>
+                    Total Cars
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-tags fs-2"></i>
+
+                <h3 id="brandCount">
+                    0
+                </h3>
+
+                <p>
+                    Brands
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-gift fs-2"></i>
+
+                <h3 id="offerCount">
+                    0
+                </h3>
+
+                <p>
+                    Offers
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="stat-card">
+
+                <i class="bi bi-calendar-check fs-2"></i>
+
+                <h3 id="bookingCount">
+                    0
+                </h3>
+
+                <p>
+                    Test Drives
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADD VEHICLE -->
+
+    <div class="card shadow-sm p-4 mb-4">
+
+        <h4 class="mb-3">
+
+            <i class="bi bi-plus-circle"></i>
+
+            Add New Vehicle
+
+        </h4>
+
+
+        <div class="row g-3">
+
+            <div class="col-md-3">
+
+                <input id="newName"
+                       class="form-control"
+                       placeholder="Car Name">
+
+            </div>
+
+
+            <div class="col-md-2">
+
+                <input id="newBrand"
+                       class="form-control"
+                       placeholder="Brand">
+
+            </div>
+
+
+            <div class="col-md-2">
+
+                <input id="newCategory"
+                       class="form-control"
+                       placeholder="Category">
+
+            </div>
+
+
+            <div class="col-md-2">
+
+                <input id="newPrice"
+                       type="number"
+                       class="form-control"
+                       placeholder="Price">
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <input id="newImage"
+                       class="form-control"
+                       placeholder="Image URL">
+
+            </div>
+
+        </div>
+
+
+        <button onclick="addVehicle()"
+                class="btn btn-warning mt-3">
+
+            <i class="bi bi-plus-lg"></i>
+
+            Add Vehicle
+
+        </button>
+
+    </div>
+
+
+    <!-- VEHICLES -->
+
+    <div class="card shadow-sm p-4 mb-4">
+
+        <h4>
+
+            <i class="bi bi-car-front"></i>
+
+            Vehicle Management
+
+        </h4>
+
+        <hr>
+
+        <div id="adminCars"></div>
+
+    </div>
+
+
+    <!-- BOOKINGS -->
+
+    <div class="card shadow-sm p-4">
+
+        <h4>
+
+            <i class="bi bi-calendar-check"></i>
+
+            Test Drive Bookings
+
+        </h4>
+
+        <hr>
+
+        <div id="adminBookings"></div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

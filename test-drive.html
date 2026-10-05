@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Test Drive | DriveX Motors</title>
+
+    <link rel="stylesheet"
+          href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet"
+          href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+
+<section class="page-banner">
+
+    <div class="container">
+
+        <h1>Book a Test Drive</h1>
+
+        <p>
+            Experience your dream car before you buy.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card shadow-sm p-4">
+
+                    <div class="text-center mb-4">
+
+                        <i class="bi bi-car-front-fill display-4 text-warning"></i>
+
+                        <h2 class="mt-2">
+                            Test Drive Booking
+                        </h2>
+
+                    </div>
+
+
+                    <form id="testDriveForm"
+                          onsubmit="bookTestDrive(event)">
+
+                        <input id="tdName"
+                               class="form-control mb-3"
+                               placeholder="Full Name"
+                               required>
+
+
+                        <input id="tdPhone"
+                               class="form-control mb-3"
+                               placeholder="Phone Number"
+                               required>
+
+
+                        <input id="tdEmail"
+                               type="email"
+                               class="form-control mb-3"
+                               placeholder="Email"
+                               required>
+
+
+                        <select id="tdCar"
+                                class="form-select mb-3"
+                                required>
+
+                            <option value="">
+                                Select Car
+                            </option>
+
+                        </select>
+
+
+                        <input id="tdDate"
+                               type="date"
+                               class="form-control mb-3"
+                               required>
+
+
+                        <select id="tdTime"
+                                class="form-select mb-3"
+                                required>
+
+                            <option value="">
+                                Select Time
+                            </option>
+
+                            <option>10:00 AM</option>
+
+                            <option>12:00 PM</option>
+
+                            <option>3:00 PM</option>
+
+                            <option>5:00 PM</option>
+
+                        </select>
+
+
+                        <textarea id="tdMessage"
+                                  class="form-control mb-3"
+                                  rows="4"
+                                  placeholder="Message"></textarea>
+
+
+                        <button type="submit"
+                                class="btn btn-warning w-100">
+
+                            <i class="bi bi-calendar-check"></i>
+
+                            Book Test Drive
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div id="footer"></div>
+
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+<script src="script.js"></script>
+
+<script src="testdrive.js"></script>
+
+</body>
+
+</html>
